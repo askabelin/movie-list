@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Studio Ghibli Movies</title>
+</head>
+<body>
+<ul>
+    {% for movie in movies %}
+        <li>{{ movie.title }}
+            <ul>
+                {% for character in movie.characters %}
+                    <li>{{ character }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
